@@ -29,7 +29,7 @@ await new Command()
     const templateText = await Deno.readTextFile(template);
     const readmePath = path.join(folder, "README.md");
     await Deno.writeTextFile(
-      path.join(folder, "README.md"),
+      readmePath,
       templateText.replace("%usage%", result),
     );
     console.log(`Wrote ${readmePath}.`);
