@@ -23,7 +23,7 @@ await new Command()
     for (let i = 0; i < comments.length; i++) {
       const comment = comments[i];
       const { trigger, replace } = parsedData.matches[i];
-      result += `| ${trigger} | ${replace} | ${comment}\n`;
+      result += `| \`\` ${trigger} \`\` | ${replace} | ${comment}\n`;
     }
 
     const templateText = await Deno.readTextFile(template);
